@@ -293,6 +293,19 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@google/model-viewer@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@google/model-viewer/-/model-viewer-0.5.0.tgz#567cfbbe81f2c0cf05692663884c00e8350f9c97"
+  integrity sha512-US3bqgWyh9otGFqISEIYYKd3zJTgdRIObg94CEtDD7w2SOMX+jOmm4JY9ljKNJZmDxEKqNJCGx46hfIPDEQvGw==
+  dependencies:
+    lit-element "^2.0.0"
+    three "^0.105.2"
+
+"@magicleap/prismatic@^0.20.2":
+  version "0.20.2"
+  resolved "https://registry.yarnpkg.com/@magicleap/prismatic/-/prismatic-0.20.2.tgz#4e4d5b61a37affd357aba46996072e1b4e5133fb"
+  integrity sha512-vmV/3RlVFwR/upnPj8UMrrcdSaDYRXMUW6GB0g47IOq+BEFhdr9D0HddnqcBgrJ0GJPLCo2geE2NsdDH35y9pg==
+
 "@ngtools/webpack@8.0.6":
   version "8.0.6"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.0.6.tgz#c6b5416710913b24b741a17c8f255e54f42c9abf"
@@ -536,6 +549,11 @@
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
+
+"@webcomponents/webcomponentsjs@^2.2.10":
+  version "2.2.10"
+  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.2.10.tgz#6f6bee0277833ae98d7e5b46f1e0fdb48cd5ff44"
+  integrity sha512-5dzhUhP+h0qMiK0IWb7VNb0OGBoXO3AuI6Qi8t9PoKT50s5L1jv0xnwnLq+cFgPuTB8FLTNP8xIDmyoOsKBy9Q==
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -2556,6 +2574,11 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
+focus-visible@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/focus-visible/-/focus-visible-5.0.2.tgz#4fae9cf40458b73c10701c9774c462e3ccd53caf"
+  integrity sha512-zT2fj/bmOgEBjqGbURGlowTmCwsIs3bRDMr/sFZz8Ly7VkEiwuCn9swNTL3pPuf8Oua2de7CLuKdnuNajWdDsQ==
+
 follow-redirects@^1.0.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
@@ -2664,6 +2687,11 @@ fsevents@^1.2.7:
   dependencies:
     nan "^2.12.1"
     node-pre-gyp "^0.12.0"
+
+fullscreen-polyfill@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/fullscreen-polyfill/-/fullscreen-polyfill-1.0.2.tgz#7a148ba1bcf50808e4bcdeadbe89e341bbac8431"
+  integrity sha512-E+GiRov/4L8hDQKo430ijaTFx4fM2ErBZMN0gzg3W1v0gJzG2bIvvcgNLV+kReF+f8vC++SzrzCzGsqDxGpEDA==
 
 gauge@~2.7.3:
   version "2.7.4"
@@ -3834,6 +3862,18 @@ lie@~3.3.0:
   integrity sha512-UaiMJzeWRlEujzAuw5LokY1L5ecNQYZKfmyZ9L7wDHb/p5etKaxXhohBcrw0EYby+G/NA52vRSN4N39dxHAIwQ==
   dependencies:
     immediate "~3.0.5"
+
+lit-element@^2.0.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-2.2.0.tgz#e853be38021f0c7743a10180affdf84b8a02400c"
+  integrity sha512-Mzs3H7IO4wAnpzqreHw6dQqp9IG+h/oN8X9pgNbMZbE7x6B0aNOwP5Nveox/5HE+65ZfW2PeULEjoHkrwpTnuQ==
+  dependencies:
+    lit-html "^1.0.0"
+
+lit-html@^1.0.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-1.1.1.tgz#186ed6abcc70c0d24e1132b37411c3b2645ed1aa"
+  integrity sha512-1WqhkPpj+CKwLRXCCbyRGnWkcFKE4ft2+j8C2zaXwFUK9I2vYDzTuDGPh0H9hZcDBEwoe6YpPC8AO5734EPORQ==
 
 loader-runner@^2.3.0:
   version "2.4.0"
@@ -6217,6 +6257,11 @@ terser@^4.0.0:
     commander "^2.20.0"
     source-map "~0.6.1"
     source-map-support "~0.5.12"
+
+three@^0.105.2:
+  version "0.105.2"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.105.2.tgz#d135f1549bdcf5a9acd904ba3dbf9198a0268984"
+  integrity sha512-L3Al37k4g3hVbgFFS251UVtIc25chhyN0/RvXzR0C+uIBToV6EKDG+MZzEXm9L2miGUVMK27W46/VkP6WUZXMg==
 
 through2@^2.0.0:
   version "2.0.5"

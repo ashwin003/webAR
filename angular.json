@@ -30,7 +30,13 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@google/model-viewer/dist/model-viewer.js",
+              "node_modules/@google/model-viewer/dist/model-viewer-legacy.js",
+              "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js",
+              "node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js",
+              "node_modules/@magicleap/prismatic/prismatic.min.js"
+            ]
           },
           "configurations": {
             "production": {

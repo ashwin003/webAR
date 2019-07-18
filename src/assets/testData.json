@@ -1,0 +1,12 @@
+[
+    {
+        "id": 2,
+        "title": "Earth",
+        "model": "assets/models/earth/NOVELO_EARTH.glb"
+    },
+    {
+        "id": 1,
+        "title": "Astronaut",
+        "model": "assets/models/astronaut/Astronaut.gltf"
+    }
+]

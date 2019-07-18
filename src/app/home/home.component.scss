@@ -1,0 +1,33 @@
+.logo {
+    position: absolute;
+    top: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    filter:drop-shadow(2px 2px 5px rgb(102, 102, 238));
+    background-color: lighten($color: rgba(102, 102, 238, 0.5), $amount: 20);
+    border-radius: 5px;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+}
+
+.message {
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    width: calc(100vw - 1em);
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0 0.5em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px black, 
+                 0 0 20px rgb(102, 102, 238), 
+                 0 0 25px white, 
+                 0 0 5px darkblue;
+}
