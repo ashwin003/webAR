@@ -7,10 +7,79 @@
   <base href="https://ashwin003.github.io/webAR/">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <style type="text/css">
+    body,
+    html {
+      height: 100vh;
+      background: #F5F5F5;
+    }
+
+    .app-loading {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .app-loading .spinner {
+      height: 200px;
+      width: 200px;
+      animation: rotate 2s linear infinite;
+      transform-origin: center center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .app-loading .spinner .path {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+      animation: dash 1.5s ease-in-out infinite;
+      stroke-linecap: round;
+      stroke: #bb1717;
+    }
+
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes dash {
+      0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+      }
+
+      50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+      }
+
+      100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+      }
+    }
+  </style>
+
 <link rel="stylesheet" href="styles.4099d9db38e151513e64.css"></head>
 
 <body>
-  <app-root></app-root>
-<script src="runtime-es2015.858f8dd898b75fe86926.js" type="module"></script><script src="polyfills-es2015.27661dfa98f6332c27dc.js" type="module"></script><script src="runtime-es5.741402d1d47331ce975c.js" nomodule></script><script src="polyfills-es5.3c7a89c465e3c36435bf.js" nomodule></script><script src="scripts.50a88081d4f3ea17d52d.js"></script><script src="main-es2015.c53d85f0409d89cdf2b2.js" type="module"></script><script src="main-es5.cdc9aba96e2316a25937.js" nomodule></script></body>
+  <app-root>
+    <!-- loading layout replaced by app after startupp -->
+    <div class="app-loading">
+      <svg class="spinner" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+      </svg>
+    </div>
+  </app-root>
+<script src="runtime-es2015.858f8dd898b75fe86926.js" type="module"></script><script src="polyfills-es2015.27661dfa98f6332c27dc.js" type="module"></script><script src="runtime-es5.741402d1d47331ce975c.js" nomodule></script><script src="polyfills-es5.3c7a89c465e3c36435bf.js" nomodule></script><script src="scripts.50a88081d4f3ea17d52d.js"></script><script src="main-es2015.de4a37f6578a0f7d0b3f.js" type="module"></script><script src="main-es5.5ea7dc9b4a9fb61faefc.js" nomodule></script></body>
 
 </html>
