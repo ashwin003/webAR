@@ -1,33 +1,86 @@
+$primary: #bb1717;
+$curvature: 10px;
 .logo {
-    position: absolute;
-    top: 2em;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    filter:drop-shadow(2px 2px 5px rgb(102, 102, 238));
-    background-color: lighten($color: rgba(102, 102, 238, 0.5), $amount: 20);
-    border-radius: 5px;
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5em;
+  filter: drop-shadow(2px 2px 5px $primary);
+  background-color: lighten($color: transparentize($primary, 0.9), $amount: 20);
+  border-radius: 10px;
+  z-index: 2;
+
+  @media screen and (min-width: 1024px) {
+    width: 7em;
+  }
 }
 
 .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%) scale(2);
+  filter: drop-shadow(2px 2px 5px $primary);
+
+  @media screen and (max-width: 320px) {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  @media screen and (min-width: 1024px) {
+    transform: translate(-50%, -50%) scale(3);
+  }
 }
 
 .message {
+  position: absolute;
+  bottom: -1.75px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100vw - 1em);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.2em;
+  z-index: 3;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  background: transparent;
+  border-top-left-radius: $curvature;
+  border-top-right-radius: $curvature;
+  width: 100vw;
+  padding: 0.5em;
+  max-width: 500px;
+  overflow: hidden;
+  text-shadow: 1px 1px 2px black, 0 0 2px $primary, 0 0 5px white;
+
+  &:before,
+  &:after {
+    content: "";
     position: absolute;
-    bottom: 1em;
+    top: 0;
     left: 0;
-    width: calc(100vw - 1em);
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 1.2em;
-    margin: 0 0.5em;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 2px black, 
-                 0 0 20px rgb(102, 102, 238), 
-                 0 0 25px white, 
-                 0 0 5px darkblue;
+    right: 0;
+    bottom: 0;
+    padding: 0.5em;
+  }
+
+  &:before {
+    filter: url(#myblurfilter);
+    filter: blur(5px);
+  }
+
+  &:after {
+    content: attr(data-message);
+    background: transparentize($color: #f5f5f5, $amount: 0.5);
+    
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 1em;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 1.5em;
+  }
 }

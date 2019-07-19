@@ -52,6 +52,9 @@ export class QrScannerComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.load();
+    window.addEventListener('resize', () => {
+      this.load();
+    });
   }
 
   startScanning(): void {
@@ -148,9 +151,9 @@ export class QrScannerComponent implements OnInit, OnDestroy, AfterViewInit {
     } else if (_navigator.webkitGetUserMedia) {
       this.isWebkit = true;
       _navigator.webkitGetUserMedia({ video: options, audio: false }, success, error);
-    } else if (_navigator.mozGetUserMedia) {
+    } else if (_navigator.mediaDevices && _navigator.mediaDevices.getUserMedia) {
       this.isMoz = true;
-      _navigator.mozGetUserMedia({ video: options, audio: false }, success, error);
+      _navigator.mediaDevices.getUserMedia({ video: options, audio: false }, success, error);
     }
 
     this.isDeviceConnected = true;

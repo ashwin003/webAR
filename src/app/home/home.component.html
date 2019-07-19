@@ -1,6 +1,11 @@
 <img class="logo" src="assets/frs.png" />
 <img class="overlay" src="assets/overlay.png" />
 <app-qr-scanner (onRead)="onRead($event)"></app-qr-scanner>
-<div class="message">
-    {{ message }}
+<div class="message" [attr.data-message]="message">
+    <span>{{ message }}</span>
 </div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0">
+    <filter id="myblurfilter" width="110%" height="100%">
+        <feGaussianBlur stdDeviation="5" result="blur" />
+    </filter>
+</svg>
