@@ -1,11 +1,17 @@
-<img class="logo" src="assets/frs.png" />
-<img class="overlay" src="assets/overlay.png" />
-<app-qr-scanner (onRead)="onRead($event)"></app-qr-scanner>
-<div class="message" [attr.data-message]="message">
-    <span>{{ message }}</span>
-</div>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0">
-    <filter id="myblurfilter" width="110%" height="100%">
-        <feGaussianBlur stdDeviation="5" result="blur" />
-    </filter>
-</svg>
+<h1 class="page-title">{{ title }}</h1>
+
+<section class="slider">
+    <div class="container" #slider>
+        <mat-card class="card" draggable="true" *ngFor="let slide of slides"
+            [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
+            <mat-card-header>
+                <mat-card-title>{{ slide.title }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{ slide.message }}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</section>
+
+<a mat-raised-button class="get-started" routerLink="scan">Get Started</a>

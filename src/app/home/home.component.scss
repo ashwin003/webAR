@@ -1,86 +1,116 @@
 $primary: #bb1717;
-$curvature: 10px;
-.logo {
-  position: absolute;
-  top: 5vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 5em;
-  filter: drop-shadow(2px 2px 5px $primary);
-  background-color: lighten($color: transparentize($primary, 0.9), $amount: 20);
-  border-radius: 10px;
-  z-index: 2;
 
-  @media screen and (min-width: 1024px) {
-    width: 7em;
-  }
-}
+$multiplier: 3.25;
 
-.overlay {
+$card-width: 80vw;
+$card-height: 65vh;
+
+$card-width-tablet: 42vw;
+$card-height-tablet: 45vh;
+
+$card-width-tablet-landscape: 32vw;
+
+section.slider {
+  width: 100vw;
+  overflow-x: hidden;
+  padding: 1em;
+  height: auto;
   position: absolute;
   top: 50%;
-  left: 50%;
-  z-index: 2;
-  transform: translate(-50%, -50%) scale(2);
-  filter: drop-shadow(2px 2px 5px $primary);
+  left: 0;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  .container {
+    width: #{$card-width * $multiplier};
+    height: 100%;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
 
-  @media screen and (max-width: 320px) {
-    transform: translate(-50%, -50%) scale(1.5);
-  }
+    @media screen and (min-width: 768px) and (orientation: portrait) {
+      width: #{$card-width-tablet * $multiplier};
+    }
 
-  @media screen and (min-width: 1024px) {
-    transform: translate(-50%, -50%) scale(3);
+    @media screen and (min-width: 768px) and (orientation: landscape) {
+      width: #{$card-width-tablet-landscape * $multiplier};
+    }
+
+    .card {
+      display: inline-block;
+      position: relative;
+      width: $card-width;
+      height: $card-height;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      &:not(:last-of-type) {
+        margin-right: 1em;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 10, 10, 0.55);
+        z-index: 2;
+      }
+
+      @media screen and (min-width: 768px) and (orientation: portrait) {
+        width: $card-width-tablet;
+        height: $card-height-tablet;
+      }
+
+      @media screen and (min-width: 768px) and (orientation: landscape) {
+        width: $card-width-tablet-landscape;
+        height: $card-height-tablet;
+      }
+
+      .mat-card-title {
+        color: $primary;
+        text-align: center;
+        width: 100%;
+        font-family: "Roboto";
+      }
+
+      p {
+        position: absolute;
+        top: 55%;
+        width: calc(100% - 2em);
+        transform: translateY(-50%);
+        color: white;
+        z-index: 3;
+        text-align: center;
+
+        font-family: "Open Sans";
+        font-weight: 200;
+      }
+    }
   }
 }
 
-.message {
+.page-title {
   position: absolute;
-  bottom: -1.75px;
   left: 50%;
+  top: 1vh;
+  color: $primary;
   transform: translateX(-50%);
-  width: calc(100vw - 1em);
-  box-sizing: border-box;
-  text-align: center;
-  font-size: 1.2em;
-  z-index: 3;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  background: transparent;
-  border-top-left-radius: $curvature;
-  border-top-right-radius: $curvature;
-  width: 100vw;
-  padding: 0.5em;
-  max-width: 500px;
-  overflow: hidden;
-  text-shadow: 1px 1px 2px black, 0 0 2px $primary, 0 0 5px white;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.5em;
-  }
-
-  &:before {
-    filter: url(#myblurfilter);
-    filter: blur(5px);
-  }
-
-  &:after {
-    content: attr(data-message);
-    background: transparentize($color: #f5f5f5, $amount: 0.5);
-    
-  }
-
-  @media screen and (max-width: 320px) {
-    font-size: 1em;
-  }
+  font-family: "Montserrat";
+  font-weight: 200;
 
   @media screen and (min-width: 1024px) {
-    font-size: 1.5em;
+    font-size: 1.75em;
   }
+}
+
+.get-started {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: $primary;
 }
