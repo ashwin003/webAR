@@ -1,12 +1,17 @@
 [
     {
+        "id": 1,
+        "title": "Astronaut",
+        "model": "assets/models/astronaut/Astronaut.gltf"
+    },
+    {
         "id": 2,
         "title": "Earth",
         "model": "assets/models/earth/NOVELO_EARTH.glb"
     },
     {
-        "id": 1,
-        "title": "Astronaut",
-        "model": "assets/models/astronaut/Astronaut.gltf"
+        "id": 3,
+        "title": "Coffee Machine",
+        "model": "assets/models/coffee_machine/scene.gltf"
     }
 ]
