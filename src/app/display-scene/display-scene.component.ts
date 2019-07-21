@@ -14,12 +14,9 @@ export class DisplaySceneComponent implements OnInit {
   constructor(private dataService: DataService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe(param => {
-      const id = param.id;
-
-      this.dataService.getData().subscribe(data => {
-        this.selectedScene = data.find((v,i) => v.id == id);
-      });
+    const id = this.activatedRoute.snapshot.params.id;
+    this.dataService.getData().subscribe(data => {
+      this.selectedScene = data.find((v,i) => v.id == id);
     });
   }
 
