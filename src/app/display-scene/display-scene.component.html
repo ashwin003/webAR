@@ -1,4 +1,4 @@
 <div *ngIf="selectedScene">
     <model-viewer class="displayed-model" background-color="#333" preload ar magic-leap camera-controls auto-rotate
-        [src]="getFullPath(selectedScene.model)"></model-viewer>
+        [src]="getFullPath(selectedScene.path)" [ios-src]="getFullPath(selectedScene.ios)"></model-viewer>
 </div>
