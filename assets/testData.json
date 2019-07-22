@@ -2,16 +2,19 @@
     {
         "id": 1,
         "title": "Astronaut",
-        "model": "assets/models/astronaut/Astronaut.gltf"
+        "path": "assets/models/astronaut/Astronaut.gltf",
+        "ios": "assets/models/astronaut/Astronaut.usdz"
     },
     {
         "id": 2,
         "title": "Earth",
-        "model": "assets/models/earth/NOVELO_EARTH.glb"
+        "path": "assets/models/earth/NOVELO_EARTH.glb",
+        "ios": "assets/models/earth/NOVELO_EARTH.usdz"
     },
     {
         "id": 3,
-        "title": "Coffee Machine",
-        "model": "assets/models/coffee_machine/scene.gltf"
+        "title": "Telescope",
+        "path": "assets/models/telescope/model.gltf",
+        "ios": "assets/models/telescope/model.usdz"
     }
 ]
