@@ -19,7 +19,7 @@ export class QrScannerComponent implements OnInit, OnDestroy, AfterViewInit {
   private canvasHeight = '100vh';
   private facing = 'environment';
   private debug = true;
-  private mirror = false;
+  private mirror = true;
   gCtx: CanvasRenderingContext2D;
   qrCode: QRCode = null;
   isDeviceConnected = false;

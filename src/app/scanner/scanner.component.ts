@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,13 +9,14 @@ import { Router } from '@angular/router';
 export class ScannerComponent implements OnInit {
   
   message = 'Please scan a supported QR Code to proceed';
-  constructor(private router: Router) { }
+  constructor(private router: Router,private zone: NgZone) { }
 
   ngOnInit() {
   }
 
   onRead(id: string): void {
     this.message = 'Code scanned. Now moving to the next level';
-    this.router.navigate(['scene', id]);
+    this.zone.run(() => this.router.navigate(['scene', id]));
+    ;
   }
 }
