@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy, AfterViewInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { QRCode } from '../models/qrCode';
+import * as adapter from 'webrtc-adapter';
 
 @Component({
   selector: 'app-qr-scanner',
@@ -145,6 +146,7 @@ export class QrScannerComponent implements OnInit, OnDestroy, AfterViewInit {
     if (!this.mirror) { this.videoElement.classList.add('mirrored') };
     this.renderer.appendChild(this.videoWrapper.nativeElement, this.videoElement);
 
+    console.log(adapter);
     if (_navigator.getUserMedia) {
       this.isWebkit = true;
       _navigator.getUserMedia({ video: options, audio: false }, success, error);
